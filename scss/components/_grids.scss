@@ -1,11 +1,34 @@
-.grid-container {
+.mainGrid {
     scroll-behavior: smooth;
+    background-color: $backgroundColor;
     display: grid;
     height: 100vh;
     grid-template-columns: 100%;
     grid-template-rows: 50px 50px 1fr;
     grid-template-areas:
         'header'
-        'nav'
         'main';
 }
+
+main {
+    margin-top: -10px;
+    grid-area: main;
+    padding-top: 0;
+    display: grid;
+    background: $mainBackgroundColor;
+    padding: 10px;
+}
+
+header {
+    align-items: center;
+    background-color: #0958D5;
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: header;
+    justify-content: space-between;
+    padding: 5px 0;
+    position: fixed;
+    width: 100vw;
+    z-index: 0;
+}
+
