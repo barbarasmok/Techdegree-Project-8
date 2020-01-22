@@ -1,5 +1,4 @@
-const randomuserUrl = 'https://randomuser.me/api/?format=json';
-const overlay = document.querySelector('.overlay');
+const randomuserUrl = 'https://randomuser.me/api/';
 const card = document.querySelector('.cards');
 const employeesList = document.getElementById('employees');
 
@@ -7,21 +6,15 @@ const employeesList = document.getElementById('employees');
 function fetchData(url) {
    return fetch(url)
         .then(res => res.json())
-         .catch(error => console.log(err => "Uh oh, something has gone wrong. Please tweet us @randomapi about the issue. Thank you.", err));
+        .catch(error => console.log(err => "Uh oh, something has gone wrong. Please tweet us @randomapi about the issue. Thank you.", err));
 }
 
- Promise.all([
-     fetchData('https://randomuser.me/api/')
-     fetchData('https://randomuser.me/api/?page=3&results=10&seed=abc')
+Promise.all([
+     fetchData('https://randomuser.me/api/'),
+     fetchData('https://randomuser.me/api/?page=3&results=10&seed=abc'),
      fetchData('https://randomuser.me/api/?inc=name,location,email,phone,cell,id,picture,nat')
 ])
 
-console.log(fetchData);
-
-.then(data => {
-    const employees = data[0].message;
-    const randomImage = data[1].message;
-})
 
 //Helper functions
 function checkStatus(response) {
@@ -43,18 +36,6 @@ function generateHTML(data) {
     cards.innerHTML = html;
 }
 
-function fetchData() {
-    const employee = select.value;
-    const img = card.querySelector('img');
-    const p = card.querySelector('p');
-
-    fetchData('https://randomuser.me/api/?inc=name,location,email,phone,cell,id,picture,nat')
-        .then(data => {
-            img.src = data.message;
-            img.alt = profile;
-        })
-}
-
 //Post Data
 function postData(e) {
     e.preventDefault();
@@ -63,7 +44,7 @@ function postData(e) {
     const city = document.getElementById('city').value;
     const config = {
         method: 'POST',
-        headers {
+        headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({ name, email, city})
