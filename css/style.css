@@ -70,42 +70,13 @@ img {
   margin-bottom: 15px;
 }
 
-#cards {
-  background-color: lightgrey;
-  padding: 15px;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-
-#cards :last-of-type {
-  border-bottom: none;
-}
-
-#cards  a:hover {
-  color: #09427b;
-  text-decoration: underline;
-}
-
-#cards  span {
-  font-size: 0.85em;
-  line-height: 1;
-  float: right;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 15px;
-  background-color: #074473;
-}
-
 
 /* MEDIA QUERIES */
 @media (min-width: 568px) {
   main {
     width: 65%;
   }
-  #cards {
-    box-shadow: 0 2px 1px rgba(0,0,0,0.15)
-  }
+ 
 }
 
 
@@ -119,11 +90,7 @@ img {
     float: left;
     margin-right: 20px;
   }  
-  #cards {
-    padding: 20px;
-    margin-bottom: 35px;
-    overflow: auto;
-  }
+
 }
 
 @media (min-width: 1024px) {
