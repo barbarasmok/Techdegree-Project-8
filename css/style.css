@@ -10,6 +10,11 @@ body {
 
 body {
   position: relative;
+  font-family: 'Lato', sans-serif;
+  color: #000;
+  line-height: 1.4;
+  font-size: 1em;
+  
 }
 
 .overlay {
@@ -43,64 +48,70 @@ body {
   display: none;
 }
 
+
 h1 {
-  color: #000;
-  font-size: 1.4em;
-  text-align: left;
+  color: #FFF;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 25px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  font-weight: bolder;
+  line-height: 1.2;
 }
 
-h2 {
+header {
+  background-color: #0958D5;
+}
+
+.name {
   font-size: 1.2em;
   line-height: 1;
-  margin: 0 0 0.25em 0;
-}
-
-h2 + p {
-  color: #828282;
-  margin: 0 0 1.5em 0;
-}
-
-h3 {
   text-align: center;
+  margin: 10px auto 5px;
 }
+
+.email,
+.address {
+  font-size: 1em;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.address {
+  color: #908f8f;
+}
+
 
 img {
   width: 100%;
-  border-radius: 50px;
+  border-radius: 50%;
+  margin-top: 60px;
   margin-bottom: 15px;
+}
+
+main {
+  background-color: #ececec;
+}
+.card {
+  width: 80%;
+  margin: auto;
 }
 
 
 /* MEDIA QUERIES */
 @media (min-width: 568px) {
-  main {
-    width: 65%;
-  }
+  
  
 }
 
 
 @media (min-width: 768px) {
-  main {
-    width: 70%;
-    max-width: 968px;
-  }
-  img {
-    width: auto;
-    float: left;
-    margin-right: 20px;
-  }  
+  
 
 }
 
 @media (min-width: 1024px) {
-  .mainGrid {
-    width: 90%;
-    max-width: 1024px;
-    margin: auto;
-  }
 
-  main {
-    width: 100%;
-  }
 }
