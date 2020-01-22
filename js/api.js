@@ -1,5 +1,5 @@
 const randomuserUrl = 'https://randomuser.me/api/';
-const card = document.querySelector('.cards');
+const card = document.querySelector('.card');
 const employeesList = document.getElementById('employees');
 
 //Fetch Functions
