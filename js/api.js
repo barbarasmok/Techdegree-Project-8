@@ -33,7 +33,7 @@ function generateHTML(data) {
          <p>${person.city}</p>
          `;
 
-    cards.innerHTML = html;
+    card.innerHTML = html;
 }
 
 //Post Data
@@ -103,7 +103,7 @@ function postData(e) {
 
 
 // //Overlay set up
-// cards.addEventListener('mouseover', (event) => {
+// card.addEventListener('mouseover', (event) => {
 
 //     fetch(randomuserUrl)
 //         .then(res => res.json())
