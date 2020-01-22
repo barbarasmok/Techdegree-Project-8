@@ -7,59 +7,92 @@ const overlay = document.querySelector(".overlay");
 const modalContainer = document.querySelector(".modal-content");
 const modalClose = document.querySelector(".modal-close");
 
-//Fetch Functions
-function fetchData(url) {
-   return fetch(url)
-        .then(res => res.json())
-        .catch(error => console.log(err => "Uh oh, something has gone wrong. Please tweet us @randomapi about the issue. Thank you.", err));
-}
+//Fetch data from API
+fetch(urlAPI)
+    .then(res => res.json())
+    .then(res => res.results)
+    .then(displayEmployees)
+    .catch(err => console.log(err))
 
-Promise.all([
-     fetchData('https://randomuser.me/api/'),
-     fetchData('https://randomuser.me/api/?page=3&results=10&seed=abc'),
-     fetchData('https://randomuser.me/api/?inc=name,location,email,phone,cell,id,picture,nat')
-])
+function displayEmployees(employeeData) {
+     employees = employeeData;
+     //store HTML
+     let employeeHTML = '';
+
+     //Loop
+     employees.forEach((employee, index) => {
+        let name = employee.name;
+        let email = employee.email;
+        let city = employee.location.city;
+        let picture = employee.picture;
+
+        employeeHTML += `
+            <div class="card" data-index="${index}">
+            <img class="avatar" src="${picture.large}" />
+            <div class="text-container">
+            <h2 class="name">${name.first} ${name.last}</h2>
+            <p class="email">${email}</p>
+            <p class="address">${city}</p>
+            </div>
+            </div>
+            `
+    });
+    gridContainer.innerHTML = employeeHTML;
+};
+
+// //Fetch Functions
+// function fetchData(urlAPI) {
+//    return fetch(url)
+//         .then(res => res.json())
+//         .catch(error => console.log(err => "Uh oh, something has gone wrong. Please tweet us @randomapi about the issue. Thank you.", err));
+// }
+
+// Promise.all([
+//      fetchData('https://randomuser.me/api/'),
+//      fetchData('https://randomuser.me/api/?page=3&results=10&seed=abc'),
+//      fetchData('https://randomuser.me/api/?inc=name,location,email,phone,cell,id,picture,nat')
+// ])
 
 
-//Helper functions
-function checkStatus(response) {
-    if(response.Ok) {
-        return Promise.resolve(response);
-    } else {
-        return Promise.reject(new Error(response.statusText));
-    }
-}
+// //Helper functions
+// function checkStatus(response) {
+//     if(response.Ok) {
+//         return Promise.resolve(response);
+//     } else {
+//         return Promise.reject(new Error(response.statusText));
+//     }
+// }
 
-function generateHTML(data) {
-    const html = `
-        <img src='${data}' alt>
-        <h2>${person.name} ${person.lastName}</h2>
-         <span>${person.email}</span>
-         <p>${person.city}</p>
-         `;
+// function generateHTML(data) {
+//     const html = `
+//         <img src='${data}' alt>
+//         <h2>${person.name} ${person.lastName}</h2>
+//          <span>${person.email}</span>
+//          <p>${person.city}</p>
+//          `;
 
-    card.innerHTML = html;
-}
+//     card.innerHTML = html;
+// }
 
-//Post Data
-function postData(e) {
-    e.preventDefault();
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const city = document.getElementById('city').value;
-    const config = {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ name, email, city})
-    }
+// //Post Data
+// function postData(e) {
+//     e.preventDefault();
+//     const name = document.getElementById('name').value;
+//     const email = document.getElementById('email').value;
+//     const city = document.getElementById('city').value;
+//     const config = {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify({ name, email, city})
+//     }
 
-    fetch('https://randomuser.me/api/?inc=name,location,email,phone,cell,id,picture,nat', config)
-        .then(checkStatus)
-        .then(res => res.JSON())
-        .then(data => console.log(data))
-}
+//     fetch('https://randomuser.me/api/?inc=name,location,email,phone,cell,id,picture,nat', config)
+//         .then(checkStatus)
+//         .then(res => res.JSON())
+//         .then(data => console.log(data))
+// }
 
 
 //THIS METHOD ISN"T WORKING EITHER
