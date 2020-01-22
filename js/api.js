@@ -57,8 +57,8 @@ function postData(e) {
 }
 
 
-
-// //Fetch Functions 
+//THIS METHOD ISN"T WORKING EITHER
+// Fetch Functions 
 // function getProfiles(json) {
 //     const profiles = json.people.map(person => {
 //         const name = person.name;
