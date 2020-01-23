@@ -100,14 +100,22 @@ header {
 }
 
 
-.avatar,
-.modalAvatar {
-  width: 75%;
+.avatar {
+  width: 65%;
   border-radius: 50%;
   margin: 0 auto 5px;
   text-align: center;
   border: none;
 }
+
+.modalAvatar {
+  width: 60%;
+  margin: 10px;
+  border-radius: 50%;
+  margin: 0 auto 5px;
+  text-align: center;
+  border: none;
+} 
 
 main {
   text-align: center;
@@ -152,6 +160,11 @@ main {
     float: left;
     margin: 10px 10px 10px 0;
     width: 40%;
+  } 
+
+  .modalAvatar {
+    width: 50%;
+    margin: 10px;
   } 
 
   .text-container {
@@ -214,6 +227,11 @@ main {
 
   .avatar {
     width: 30%;
+    margin: 10px;
+  } 
+
+  .modalAvatar {
+    width: 50%;
     margin: 10px;
   } 
 
