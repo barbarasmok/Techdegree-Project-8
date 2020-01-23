@@ -217,4 +217,8 @@ main {
     margin: 10px;
   } 
 
+  .modal {
+    width: 375px;
+  }  
+
 }
