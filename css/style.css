@@ -54,7 +54,7 @@ h1 {
   font-size: 1.5em;
   text-align: center;
   padding: 25px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   /* text-transform: uppercase; */
   font-family: 'Lato', sans-serif;
   font-weight: bolder;
@@ -74,6 +74,16 @@ header {
   /* position: fixed; */
   width: 100vw;
   margin-top: 0;
+}
+
+header input {
+  width: 90%;
+  border: 2px solid rgb(214, 214, 214);
+  border-radius: 15px;
+  padding: 15px;
+  font-size: 1em;
+  margin: auto 15px 25px;
+  text-align: center;
 }
 
 .name,
@@ -157,6 +167,12 @@ main {
     font-size: 1.8em;
   }
 
+  header input {
+      width: 95%;
+      margin: auto 20px;
+      margin-bottom: 25px;
+  }
+
   .avatar {
     width: auto;
     float: left;
@@ -213,6 +229,25 @@ main {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin: auto;
+  }
+
+  header input {
+    width: 40%;
+    padding: 10px;
+    margin: auto 0;
+    margin-right: 20px;
+  }
+
+  h1 {
+    padding: 0;
+    text-align: left;
+    margin-left: 20px;
+  }
 
   .card {
     margin: 20px auto;
