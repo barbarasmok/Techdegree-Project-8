@@ -62,7 +62,7 @@ h1 {
 }
 
 header {
-  background-color: #0958D5;
+  background-color: #011533;
 }
 
 .name {
@@ -85,33 +85,98 @@ header {
 
 
 img {
-  width: 100%;
+  width: 75%;
   border-radius: 50%;
-  margin-top: 60px;
-  margin-bottom: 15px;
+  margin: 0 auto 5px;
+  text-align: center;
+  border: solid white 6px;
 }
 
 main {
-  background-color: #ececec;
+  text-align: center;
+  margin-top: 20px;
 }
+
 .card {
   width: 80%;
-  margin: auto;
+  background: rgb(243, 243, 243);
+  border-radius: 15px;
+  margin: 20px auto;
+  padding: 15px;
 }
 
 
 /* MEDIA QUERIES */
 @media (min-width: 568px) {
-  
+  main {
+    width: 65%;
+  }
  
 }
 
 
 @media (min-width: 768px) {
-  
+  main {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 50px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  img {
+    width: auto;
+    float: left;
+    margin-right: 30px;
+    width: 40%;
+  } 
+
+  .text-container {
+    margin-top: 50px;
+  }
+
+  .name {
+    font-size: 1.6em;
+  }
+
+  .name,
+  .email,
+  .address {
+    margin: 5px 10px;
+    text-align: left;
+  }
+
+  .email,
+  .address {
+    font-size: 1.25em;
+  }
+
+
+  .card {
+    padding: 20px;
+    margin-bottom: 35px;
+    overflow: auto;
+    margin: 20px auto;
+  }
 
 }
 
 @media (min-width: 1024px) {
+  main {
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    display: inline-block;
+  }
 
+
+  .card {
+
+
+  }
 }
