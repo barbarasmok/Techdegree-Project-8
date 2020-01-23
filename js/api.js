@@ -6,7 +6,7 @@ const gridContainer = document.querySelector(".grid-container");
 const overlay = document.querySelector(".overlay");
 const modalContainer = document.querySelector(".modal-content");
 const modalClose = document.querySelector(".modal-close");
-
+const employeeSearch = document.querySelector('#input');
 
 //Fetch data from API
 fetch(urlAPI)
@@ -87,6 +87,26 @@ modalClose.addEventListener('click', () => {
 });
 
 //Search Filter
+employeeSearch.addEventListener("keyup", function(){
+    let searchable = event.target.value.toLowerCase();
+    let a, txt;
+
+    for (let m = 0; m < document.querySelectorAll('[class*="card"]').length; m++){
+        a = document.querySelectorAll('[class*="card"]')[m];
+        txt = a.querySelector(".name").textContent;
+        if(txt.toLowerCase().indexOf(searchable) > -1){
+          a.classList.remove("hidden");
+        }
+        else
+        {
+          a.classList.add("hidden");
+        }
+    
+      }
+});
+
+
+
 
 
 
