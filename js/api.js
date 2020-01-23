@@ -47,7 +47,7 @@ function displayModal(index) {
         location: { city, street, state, postcode}, 
         picture } = employees[index];
 
-    let date = new Date(dob.date);3
+    let date = new Date(dob.date);
     const modalHTML = `
         <img class="avatar" src="${picture.large}" />
         <div class="text-container">
@@ -73,7 +73,9 @@ gridContainer.addEventListener('click', e => {
         const index = card.getAttribute('data-index');
 
         displayModal(index);
-    }
+        overlay.classList.remove("hidden");  
+    } 
+    
 });
 
 //modalClose click event
