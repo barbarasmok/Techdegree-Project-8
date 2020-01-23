@@ -52,14 +52,14 @@ function displayModal(index) {
 
     let date = new Date(dob.date);
     const modalHTML = `
-        <img class="avatar" src="${picture.large}" />
-        <div class="text-container">
-        <h2 class="name">${name.first} ${name.last}</h2>
-        <p class="email">${email}</p>
-        <p class="address">${city}</p>
+        <img class="modalAvatar" src="${picture.large}" />
+        <div class="modalTextContainer">
+        <h2 class="nameModal">${name.first} ${name.last}</h2>
+        <p class="emailModal">${email}</p>
+        <p class="addressModal">${city}</p>
         <hr />
         <p>${phone}</p>
-        <p class="address">${street.name}, ${state} ${postcode}</p>
+        <p class="addressModal">${street.name}, ${state} ${postcode}</p>
         <p>Birthday:
         ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
         </div>
