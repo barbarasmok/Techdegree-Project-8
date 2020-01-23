@@ -61,6 +61,13 @@ h1 {
   line-height: 1.2;
 }
 
+.logo {
+  display: block;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+}
+
 header {
   background-color: #011533;
   z-index: 1100;
@@ -79,7 +86,7 @@ header {
 
 .email,
 .address {
-  font-size: 1em;
+  font-size: 0.9em;
   text-align: center;
   margin: 0 auto;
 }
