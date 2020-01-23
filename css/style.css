@@ -32,7 +32,7 @@ body {
   position: relative;
   text-align: center; 
   background: #fff;
-  border: 2px solid rgb(107, 107, 107);
+  border: none;
   border-radius: 15px;
   padding: 15px;
 }
@@ -55,7 +55,7 @@ h1 {
   text-align: center;
   padding: 25px;
   margin: 0 auto;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-family: 'Lato', sans-serif;
   font-weight: bolder;
   line-height: 1.2;
@@ -73,7 +73,6 @@ header {
   z-index: 1100;
   /* position: fixed; */
   width: 100vw;
-  box-shadow: 5px 5px 30px rgba(59, 59, 59, 0.6);
   margin-top: 0;
 }
 
@@ -88,17 +87,14 @@ header {
 .email,
 .emailModal,
 .address,
-.addressModal {
+.addressModal,
+p {
   font-size: 0.9em;
   text-align: center;
-  margin: 0 auto;
-}
-
-.address,
-.addressModal {
+  margin: 5px auto;
   color: #908f8f;
+  
 }
-
 
 .avatar {
   width: 65%;
@@ -233,12 +229,12 @@ main {
   } 
 
   .modalAvatar {
-    width: 50%;
+    width: 40%;
     margin: 10px;
   } 
 
   .modal {
-    width: 375px;
+    width: 475px;
   }  
 
 }
