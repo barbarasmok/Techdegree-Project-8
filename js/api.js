@@ -102,8 +102,11 @@ employeeSearch.addEventListener("keyup", function(){
           a.classList.add("hidden");
         }
     
-      }
+    }
 });
+
+
+//Preview and Next
 
 
 

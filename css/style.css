@@ -42,6 +42,9 @@ body {
   right: 15px;
   top: 5px;
   cursor: pointer;
+  border: none;
+  font-size: 20px;
+  color: black;
 }
 
 .hidden {
@@ -109,6 +112,24 @@ p {
   margin: 5px auto;
   color: #908f8f;
   
+}
+
+.leftArrow, 
+.rightArrow {
+  position: absolute;
+  top: 180px;
+  cursor: pointer;
+  border: none;
+  font-size: 30px;
+  color: black;
+}
+
+.leftArrow {
+  left: 15px;
+}
+
+.rightArrow {
+  right: 15px;
 }
 
 .avatar {
