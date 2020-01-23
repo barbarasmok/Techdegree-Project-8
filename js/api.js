@@ -43,7 +43,10 @@ function displayEmployees(employeeData) {
 
 //Display Modal function 
 function displayModal(index) {
-    let { name, dob, phone, email, 
+    let { name, 
+        dob, 
+        phone, 
+        email, 
         location: { city, street, state, postcode}, 
         picture } = employees[index];
 
@@ -77,6 +80,8 @@ gridContainer.addEventListener('click', e => {
     } 
     
 });
+
+
 
 //modalClose click event
 modalClose.addEventListener('click', () => {
