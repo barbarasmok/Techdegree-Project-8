@@ -94,8 +94,8 @@ modalClose.addEventListener('click', () => {
 employeeSearch.addEventListener("keyup", function(){
     let searchable = event.target.value.toLowerCase();
     let a, txt;
-    for (let m = 0; m < document.querySelectorAll('[class*="card"]').length; m++){
-        a = document.querySelectorAll('[class*="card"]')[m];
+    for (let i = 0; i < document.querySelectorAll('[class*="card"]').length; i++){
+        a = document.querySelectorAll('[class*="card"]')[i];
         txt = a.querySelector(".name").textContent;
         if(txt.toLowerCase().indexOf(searchable) > -1){
           a.classList.remove("hidden");
