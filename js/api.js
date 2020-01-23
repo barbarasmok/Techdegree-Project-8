@@ -7,6 +7,8 @@ const overlay = document.querySelector(".overlay");
 const modalContainer = document.querySelector(".modal-content");
 const modalClose = document.querySelector(".modal-close");
 const employeeSearch = document.querySelector('#input');
+const leftArrow = document.querySelector('.leftArrow');
+const rightArrow = document.querySelector('.rightArrow');
 
 //Fetch data from API
 fetch(urlAPI)
@@ -53,7 +55,7 @@ function displayModal(index) {
     let date = new Date(dob.date);
     const modalHTML = `
         <img class="modalAvatar" src="${picture.large}" />
-        <div class="modalTextContainer">
+        <div class="modalTextContainer modal-info" data-index="${index}">
         <h2 class="nameModal">${name.first} ${name.last}</h2>
         <p class="emailModal">${email}</p>
         <p class="addressModal">${city}</p>
@@ -107,9 +109,23 @@ employeeSearch.addEventListener("keyup", function(){
 
 
 //Preview and Next
+leftArrow.addEventListener("click", () => {
+    const modalInfo = document.querySelector(".modal-info");
+    const index = modalInfo.getAttribute("data-index");
+    const prevIndex = parseInt(index) - 1;
+    if (index > 0) {
+      displayModal(prevIndex);
+    }
+});
 
-
-
+rightArrow.addEventListener("click", () => {
+    const modalInfo = document.querySelector(".modal-info");
+    const index = modalInfo.getAttribute("data-index");
+    const nextIndex = parseInt(index) + 1;
+    if (index < 12) {
+      displayModal(nextIndex);
+    }
+});
 
 
 
