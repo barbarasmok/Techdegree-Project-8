@@ -71,6 +71,7 @@ function displayModal(index) {
     modalContainer.innerHTML = modalHTML;
 };
 
+
 //Event Listeners
 gridContainer.addEventListener('click', e => { 
     if (e.target !== gridContainer) {
@@ -83,16 +84,16 @@ gridContainer.addEventListener('click', e => {
     
 });
 
-//modalClose click event
 modalClose.addEventListener('click', () => {
     overlay.classList.add("hidden");
 });
+
+
 
 //Search Filter
 employeeSearch.addEventListener("keyup", function(){
     let searchable = event.target.value.toLowerCase();
     let a, txt;
-
     for (let m = 0; m < document.querySelectorAll('[class*="card"]').length; m++){
         a = document.querySelectorAll('[class*="card"]')[m];
         txt = a.querySelector(".name").textContent;
