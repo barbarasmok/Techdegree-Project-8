@@ -47,7 +47,7 @@ function displayModal(index) {
         dob, 
         phone, 
         email, 
-        location: { city, street, state, postcode}, 
+        location: { city, number, street, state, postcode}, 
         picture } = employees[index];
 
     let date = new Date(dob.date);
@@ -59,7 +59,7 @@ function displayModal(index) {
         <p class="addressModal">${city}</p>
         <hr />
         <p>${phone}</p>
-        <p class="addressModal">${street.name}, ${state} ${postcode}</p>
+        <p class="addressModal">${street.number}, ${street.name}, ${state} ${postcode}</p>
         <p>Birthday:
         ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
         </div>
