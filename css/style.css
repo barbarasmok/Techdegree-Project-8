@@ -76,7 +76,7 @@ header {
   margin-top: 0;
 }
 
-header input {
+#input  {
   width: 90%;
   border: 2px solid rgb(214, 214, 214);
   border-radius: 15px;
@@ -167,7 +167,7 @@ main {
     font-size: 1.8em;
   }
 
-  header input {
+  #input {
       width: 95%;
       margin: auto 20px;
       margin-bottom: 25px;
@@ -236,11 +236,15 @@ main {
     margin: auto;
   }
 
-  header input {
-    width: 40%;
+  #input  {
+    width: 50%;
     padding: 10px;
     margin: auto 0;
     margin-right: 20px;
+  }
+
+  .search {
+    margin-right: 30px;
   }
 
   h1 {

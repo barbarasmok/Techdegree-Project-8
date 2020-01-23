@@ -81,13 +81,12 @@ gridContainer.addEventListener('click', e => {
     
 });
 
-
-
 //modalClose click event
 modalClose.addEventListener('click', () => {
     overlay.classList.add("hidden");
 });
 
+//Search Filter
 
 
 
