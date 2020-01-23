@@ -55,7 +55,7 @@ function displayModal(index) {
     let date = new Date(dob.date);
     const modalHTML = `
         <img class="modalAvatar" src="${picture.large}" />
-        <div class="modalTextContainer modal-info" data-index="${index}">
+        <div class="modalTextContainer modalInfo" dataInd="${index}">
         <h2 class="nameModal">${name.first} ${name.last}</h2>
         <p class="emailModal">${email}</p>
         <p class="addressModal">${city}</p>
@@ -111,8 +111,8 @@ employeeSearch.addEventListener("keyup", function(){
 
 //Preview and Next
 leftArrow.addEventListener("click", () => {
-    const modalInfo = document.querySelector(".modal-info");
-    const index = modalInfo.getAttribute("data-index");
+    const modalInfo = document.querySelector(".modalInfo");
+    const index = modalInfo.getAttribute("dataInd");
     const prevIndex = parseInt(index) - 1;
     if (index > 0) {
       displayModal(prevIndex);
@@ -120,8 +120,8 @@ leftArrow.addEventListener("click", () => {
 });
 
 rightArrow.addEventListener("click", () => {
-    const modalInfo = document.querySelector(".modal-info");
-    const index = modalInfo.getAttribute("data-index");
+    const modalInfo = document.querySelector(".modalInfo");
+    const index = modalInfo.getAttribute("dataInd");
     const nextIndex = parseInt(index) + 1;
     if (index < 12) {
       displayModal(nextIndex);
